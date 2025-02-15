@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src ="script.js"></script>
 </head>
 <body>
@@ -13,8 +14,9 @@
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS00000Db9WH" 
     method="POST" onsubmit="beforesubmit()">
     <!-- onsubmit (standard event)-->
+    <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadProject","fallback":"true","orgId":"00DNS00000Db9WH","ts":""}'>
     <input type=hidden name="oid" value="00DNS00000Db9WH"/>
-    <input type=hidden name="retURL" value=""/>
+    <input type=hidden name="retURL" value="https://sam-elite.github.io/Web-To-Lead_Project/thanks.html"/>
 
     <input type=hidden name="Lead_Date__c" class="outputdate"/>
  <!-- Hidden field is used when we enter value for (lead date) before submition it will populate the value in hidden field. -->
@@ -54,7 +56,8 @@
     </span><br> -->
     
     <input type="submit" name="submit" class="submit"/>
-    
+    <div class="g-recaptcha" 
+    data-sitekey="6LfnStgqAAAAAGvlELOPf2Nk6bGEC3sAzOX-Sx4T"></div><br>
     </form>
     
 </body>
