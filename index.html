@@ -12,7 +12,7 @@
     <h1>Create Lead</h1>
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS00000Db9WH" 
-    method="POST" onsubmit="beforesubmit()">
+    method="POST" onsubmit="beforesubmit(event)">
     <!-- onsubmit (standard event)-->
     <input type=hidden name='captcha_settings' value='{"keyname":"WebToLeadProject","fallback":"true","orgId":"00DNS00000Db9WH","ts":""}'>
     <input type=hidden name="oid" value="00DNS00000Db9WH"/>
@@ -60,7 +60,7 @@
     data-callback="captchsuccess"  
     data-sitekey="6LfnStgqAAAAAGvlELOPf2Nk6bGEC3sAzOX-Sx4T"></div><br>
     </form>
-    
+
     
 </body>
 </html>
