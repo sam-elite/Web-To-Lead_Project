@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web To Lead Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src ="script.js"></script>
+</head>
+<body>
+    <h1>Create Lead</h1>
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS00000Db9WH" 
+    method="POST" onsubmit="beforesubmit()">
+    <!-- onsubmit (standard event)-->
+    <input type=hidden name="oid" value="00DNS00000Db9WH"/>
+    <input type=hidden name="retURL" value=""/>
+
+    <input type=hidden name="Lead_Date__c" class="outputdate"/>
+ <!-- Hidden field is used when we enter value for (lead date) before submition it will populate the value in hidden field. -->
+ <!-- class for accessing data in javascript -->   
+    <label for="first_name">First Name</label>
+    <input  id="first_name" 
+    maxlength="40" 
+    name="first_name" 
+    size="20" 
+    type="text" 
+     required = "true" /><br>    <!--to make the field mandatory  -->
+    
+     
+    
+    <label for="last_name">Last Name</label>
+    <input  id="last_name" 
+    maxlength="80" 
+    name="last_name" 
+    size="20" 
+    type="text" 
+    required="true"
+    /><br>
+    
+    <label for="email">Email</label>
+    <input  id="email" 
+    maxlength="80" 
+    name="email" 
+    size="20" 
+    type="text" 
+    required="true"/><br>
+    
+    <label for="email">Lead Date</label>
+    <input type="date" required="true" class="inputdate"/>      <!--  to have a date field entry.  used class for accessing i/p values in javascript-->
+
+    <!-- Lead Date:<span class="dateInput dateOnlyInput">
+        <input  id="00NNS00000XQw6z" name="00NNS00000XQw6z" size="12" type="text" />
+    </span><br> -->
+    
+    <input type="submit" name="submit" class="submit"/>
+    
+    </form>
+    
+</body>
+</html>
